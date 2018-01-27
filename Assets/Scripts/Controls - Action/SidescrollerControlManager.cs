@@ -19,6 +19,7 @@ public class SidescrollerControlManager : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private SpriteRenderer sprite;
+    private PlayerProperties properties;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class SidescrollerControlManager : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        properties = GetComponent<PlayerProperties>();
     }
 
     private void FixedUpdate()
@@ -56,6 +58,16 @@ public class SidescrollerControlManager : MonoBehaviour
             anim.SetFloat("gravityScale", rb.gravityScale);
             anim.SetBool("isGrounded", IsGrounded());
             anim.SetBool("isAgainstWall", IsGrounded(Vector2.left) || IsGrounded(Vector2.right));
+        }
+        if (properties != null) {
+            if (rb.velocity.x > 0) {
+                properties.isFacingRight = true;
+            }
+            else if (rb.velocity.x < 0) {
+                properties.isFacingRight = false;
+            }
+            properties.isGrounded = IsGrounded();
+            properties.isWalking = properties.isGrounded && Mathf.Abs(rb.velocity.x) > 0.05;
         }
     }
 
