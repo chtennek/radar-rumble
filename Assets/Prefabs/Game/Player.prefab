@@ -21,14 +21,14 @@ GameObject:
   - component: {fileID: 4291002638583506}
   - component: {fileID: 50477750304780824}
   - component: {fileID: 212990613286484878}
-  - component: {fileID: 61003141320609794}
   - component: {fileID: 114152492139760820}
   - component: {fileID: 114597115235001816}
   - component: {fileID: 114564567013633864}
   - component: {fileID: 114297829117332600}
   - component: {fileID: 114227526777986262}
   - component: {fileID: 114072737169570156}
-  - component: {fileID: 114723589824092976}
+  - component: {fileID: 114312273640840636}
+  - component: {fileID: 58119050159404362}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -69,8 +69,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61003141320609794
-BoxCollider2D:
+--- !u!58 &58119050159404362
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -82,18 +82,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!114 &114072737169570156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -154,12 +144,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultGravityScale: 2
-  playerHeightAdjust: 0.01
-  playerWidthAdjust: 0.01
+  playerHeightAdjust: 0.02
+  playerWidthAdjust: 0.02
   collisionCheckWidth: 0.05
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &114312273640840636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1929958540368936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670693d0c97be44d08d0bc7c1d89ff3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pingPrefab: {fileID: 4810175180442014, guid: c90b8ff19bcda4e6e838c0a1f76e8d3c, type: 2}
 --- !u!114 &114564567013633864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,22 +191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f2656a7a9442f4eb99d7c2e16becd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  walkSpeed: 1
   minWalkableSpeed: 1
   inputDeadZone: 0.2
---- !u!114 &114723589824092976
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1929958540368936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e7ee7cc839c14c78b2419daa8aa5ed6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pingTime: 1
-  targetAlpha: 0.2
 --- !u!212 &212990613286484878
 SpriteRenderer:
   m_ObjectHideFlags: 1

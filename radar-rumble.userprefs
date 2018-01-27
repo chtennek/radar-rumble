@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{8A50D7E8-3421-A20C-5D89-7E0779F67244}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Input/DefaultInputReceiver.cs">
     <Files>
-      <File FileName="Assets/Scripts/Controls - Action/SidescrollerJump.cs" Line="21" Column="22" />
-      <File FileName="Assets/Scripts/Controls - Action/SidescrollerWalk.cs" Line="4" Column="40" />
-      <File FileName="Assets/Scripts/Sonar/Sonar.cs" Line="18" Column="76" />
-      <File FileName="Assets/Scripts/Controls - Action/FireProjectileByInput.cs" Line="24" Column="23" />
-      <File FileName="Assets/Scripts/Controls - Action/SidescrollerControlManager.cs" Line="9" Column="43" />
-      <File FileName="Assets/Scripts/Input/InputReceiver.cs" Line="16" Column="41" />
-      <File FileName="Assets/Scripts/Input/DefaultInputReceiver.cs" Line="9" Column="52" />
+      <File FileName="Assets/Scripts/Sonar/Sonar.cs" Line="8" Column="36" />
+      <File FileName="Assets/Scripts/Sonar/SonarPing.cs" Line="19" Column="33" />
+      <File FileName="Assets/Scripts/Sonar/PingSpawner.cs" Line="5" Column="18" />
+      <File FileName="Assets/Scripts/Controls - Action/SidescrollerJump.cs" Line="8" Column="46" />
+      <File FileName="Assets/Scripts/Controls - Action/SidescrollerControlManager.cs" Line="25" Column="53" />
+      <File FileName="Assets/Scripts/Entities/ProjectileSpawner.cs" Line="31" Column="10" />
+      <File FileName="Assets/Scripts/Input/DefaultInputReceiver.cs" Line="12" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -15,5 +15,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.radar-rumble PreferredExecutionTarget="Unity.Editor" />
   <MultiItemStartupConfigurations />
 </Properties>

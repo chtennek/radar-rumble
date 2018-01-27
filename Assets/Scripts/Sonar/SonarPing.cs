@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class SonarPing : MonoBehaviour {
     public float pingTime = .5f;
-    public float targetAlpha = .2f;
+    public float targetAlpha = 0f;
+    public SpriteRenderer pingSprite;
 
-    private float lastPingTimestamp = -Mathf.Infinity;
-
-    private SpriteRenderer sprite;
+    private float spawnTimestamp;
 
     private void Awake() {
-        sprite = GetComponent<SpriteRenderer>();
+        spawnTimestamp = Time.time;
     }
 
     private void Update() {
-        sprite.color = Color.Lerp(Color.white, new Color(1, 1, 1, targetAlpha), (Time.time - lastPingTimestamp) / pingTime);
+        pingSprite.color = Color.Lerp(Color.white, new Color(1, 1, 1, targetAlpha), (Time.time - spawnTimestamp) / pingTime);
+        if (Time.time - spawnTimestamp > pingTime) {
+            Destroy(gameObject);
+        }
     }
 
-    public void OnTriggerEnter2D(Collider2D c) {
-        lastPingTimestamp = Time.time;
-    }
 }

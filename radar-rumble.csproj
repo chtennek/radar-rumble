@@ -342,6 +342,9 @@
     <Compile Include="Assets\Scripts\Entities\ProjectileSpawner.cs" />
     <Compile Include="Assets\Scripts\Input\DefaultInputReceiver.cs" />
     <Compile Include="Assets\Scripts\Input\InputReceiver.cs" />
+    <Compile Include="Assets\Scripts\Physics\InvertedCircleCollider2D.cs" />
+    <Compile Include="Assets\Scripts\Sonar\PingSpawner.cs" />
+    <Compile Include="Assets\Scripts\Sonar\Radar.cs" />
     <Compile Include="Assets\Scripts\Sonar\Sonar.cs" />
     <Compile Include="Assets\Scripts\Sonar\SonarPing.cs" />
     <Compile Include="Assets\Scripts\Sonar\Wave.cs" />
