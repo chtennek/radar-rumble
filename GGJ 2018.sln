@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGJ 2018", "GGJ 2018.csproj", "{F1F846E9-5810-4D3B-8510-AEC529F6905C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGJ 2018.Plugins", "GGJ 2018.Plugins.csproj", "{A700FFF7-93CC-4393-5CA9-21EECE769F85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGJ 2018.Editor.Plugins", "GGJ 2018.Editor.Plugins.csproj", "{18BA8A2A-8B8E-5624-2A6A-67FB00330E71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1F846E9-5810-4D3B-8510-AEC529F6905C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F846E9-5810-4D3B-8510-AEC529F6905C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F846E9-5810-4D3B-8510-AEC529F6905C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F846E9-5810-4D3B-8510-AEC529F6905C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A700FFF7-93CC-4393-5CA9-21EECE769F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A700FFF7-93CC-4393-5CA9-21EECE769F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A700FFF7-93CC-4393-5CA9-21EECE769F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A700FFF7-93CC-4393-5CA9-21EECE769F85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BA8A2A-8B8E-5624-2A6A-67FB00330E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BA8A2A-8B8E-5624-2A6A-67FB00330E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BA8A2A-8B8E-5624-2A6A-67FB00330E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BA8A2A-8B8E-5624-2A6A-67FB00330E71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

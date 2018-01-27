@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{F1F846E9-5810-4D3B-8510-AEC529F6905C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controls - Action/FireProjectileByInput.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Input/DefaultInputReceiver.cs" Line="62" Column="67" />
+      <File FileName="Assets/Scripts/Sonar/Wave.cs" Line="11" Column="6" />
+      <File FileName="Assets/Scripts/Controls - Action/TopdownFreeWalk.cs" Line="41" Column="34" />
+      <File FileName="Assets/Scripts/Controls - Action/FireProjectileByInput.cs" Line="28" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.GGJ_2202018 PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
