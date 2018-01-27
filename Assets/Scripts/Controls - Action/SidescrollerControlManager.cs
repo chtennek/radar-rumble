@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Collider2D))]
 public class SidescrollerControlManager : MonoBehaviour
 {
     public float defaultGravityScale = 2f;
 
-    public float playerHeight = 0.22f;
-    public float playerWidth = 0.22f;
+    public float playerHeightAdjust = 0.01f;
+    public float playerWidthAdjust = 0.01f;
     public float collisionCheckWidth = 0.05f;
     public LayerMask groundMask;
+
+    private float playerHeight;
+    private float playerWidth;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -18,6 +22,10 @@ public class SidescrollerControlManager : MonoBehaviour
 
     private void Awake()
     {
+        Collider2D col = GetComponent<Collider2D>();
+        playerWidth = col.bounds.size.x + playerWidthAdjust;
+        playerHeight = col.bounds.size.y + playerHeightAdjust;
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();

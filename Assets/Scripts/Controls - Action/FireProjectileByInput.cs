@@ -21,7 +21,7 @@ public class FireProjectileByInput : MonoBehaviour
         spawner = GetComponent<ProjectileSpawner>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (input.GetButtonDown("Fire") || (rapidFire && input.GetButton("Fire")))
         {

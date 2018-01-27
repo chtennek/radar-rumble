@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SonarPing : MonoBehaviour {
     public float pingTime = .5f;
+    public float targetAlpha = .2f;
 
     private float lastPingTimestamp = -Mathf.Infinity;
 
@@ -14,7 +15,7 @@ public class SonarPing : MonoBehaviour {
     }
 
     private void Update() {
-        sprite.color = Color.Lerp(Color.white, Color.clear, (Time.time - lastPingTimestamp) / pingTime);
+        sprite.color = Color.Lerp(Color.white, new Color(1, 1, 1, targetAlpha), (Time.time - lastPingTimestamp) / pingTime);
     }
 
     public void OnTriggerEnter2D(Collider2D c) {

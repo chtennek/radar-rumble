@@ -328,6 +328,7 @@
     <Compile Include="Assets\Scripts\Common\StatusBar.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\FireProjectileByInput.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\SidescrollerControlManager.cs" />
+    <Compile Include="Assets\Scripts\Controls - Action\SidescrollerJump.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\SidescrollerWalk.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\TopDownFreeTurn.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\TopdownFreeWalk.cs" />
