@@ -26,15 +26,6 @@ public class ProjectileDriver : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.transform == sourceObject) // Don't trigger on ourselves
-        {
-            return;
-        }
-        TearDown();
-    }
-
     private void TearDown()
     {
         sourceObject.SendMessage("OnProjectileDeletion", transform);

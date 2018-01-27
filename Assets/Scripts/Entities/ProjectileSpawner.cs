@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(InputReceiver))]
 public class ProjectileSpawner : MonoBehaviour
 {
     public Transform projectilePrefab;
@@ -18,6 +17,12 @@ public class ProjectileSpawner : MonoBehaviour
     [HideInInspector]
     public List<Transform> projectilesFired = new List<Transform>();
 
+    private InputReceiver input;
+
+    private void Awake() {
+        input = GetComponent<InputReceiver>();
+    }
+
     public void Fire() { Fire(Vector2.right); }
     public void Fire(Vector2 modifier)
     {
@@ -31,7 +36,7 @@ public class ProjectileSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnProjectile(Vector2 velocity)
+    private Transform SpawnProjectile(Vector2 velocity)
     {
         Vector3 spawnLocation = transform.position + transform.rotation * (Vector3)spawnOffset;
         float rotationFromProjectileVelocity = fixRotation ? 0 : velocity.y;
@@ -47,7 +52,11 @@ public class ProjectileSpawner : MonoBehaviour
         if (pd != null)
         {
             pd.sourceObject = transform;
+            if (input != null) {
+                pd.playerId = input.playerId;
+            }
         }
+        return projectile;
     }
 
     public void OnProjectileDeletion(Transform projectile)

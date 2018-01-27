@@ -1,13 +1,10 @@
 ﻿<Properties StartupConfiguration="{8A50D7E8-3421-A20C-5D89-7E0779F67244}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Input/DefaultInputReceiver.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controls - Action/MoveTurret.cs">
     <Files>
-      <File FileName="Assets/Scripts/Sonar/Sonar.cs" Line="8" Column="36" />
-      <File FileName="Assets/Scripts/Sonar/SonarPing.cs" Line="19" Column="33" />
-      <File FileName="Assets/Scripts/Sonar/PingSpawner.cs" Line="5" Column="18" />
-      <File FileName="Assets/Scripts/Controls - Action/SidescrollerJump.cs" Line="8" Column="46" />
-      <File FileName="Assets/Scripts/Controls - Action/SidescrollerControlManager.cs" Line="25" Column="53" />
-      <File FileName="Assets/Scripts/Entities/ProjectileSpawner.cs" Line="31" Column="10" />
-      <File FileName="Assets/Scripts/Input/DefaultInputReceiver.cs" Line="12" Column="25" />
+      <File FileName="Assets/Scripts/Controls - Action/SidescrollerControlManager.cs" Line="33" Column="5" />
+      <File FileName="Assets/Scripts/Controls - Action/SidescrollerWalk.cs" Line="22" Column="6" />
+      <File FileName="Assets/Scripts/Controls - Action/FireProjectileByInput.cs" Line="28" Column="1" />
+      <File FileName="Assets/Scripts/Controls - Action/MoveTurret.cs" Line="7" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

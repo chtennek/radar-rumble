@@ -24,7 +24,7 @@ public class TopDownFreeTurn : MonoBehaviour
 
         if (movement != Vector2.zero)
         {
-            float rotationTarget = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg + rotationOffset;
+            float rotationTarget = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg - rotationOffset;
             float rotationDelta = Mathv.ClampAngle180(rotationTarget - transform.eulerAngles.z);
             rotationDelta = (rotationDelta > 0) ? Mathf.Min(rotationDelta, turnSpeed) : Mathf.Max(rotationDelta, -turnSpeed);
             transform.Rotate(rotationDelta * Vector3.forward);
