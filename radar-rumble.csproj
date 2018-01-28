@@ -315,8 +315,9 @@
     <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
     <Compile Include="Assets\Scripts\Managers\SoundController.cs" />
     <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Particles\HitParticleGenerator.cs" />
     <Compile Include="Assets\Scripts\Particles\Particle.cs" />
-    <Compile Include="Assets\Scripts\Particles\ParticleGenerator.cs" />
+    <Compile Include="Assets\Scripts\Particles\RocketParticleGenerator.cs" />
     <Compile Include="Assets\Scripts\Sonar\LetterPing.cs" />
     <Compile Include="Assets\Scripts\Sonar\PeriodicPing.cs" />
     <Compile Include="Assets\Scripts\Sonar\PingSpawner.cs" />

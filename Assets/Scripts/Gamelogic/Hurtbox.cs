@@ -9,11 +9,13 @@ public class Hurtbox : MonoBehaviour
     private int playerId;
     private PingSpawner pingSpawner;
     private ScreenShake screenShake;
+    private HitParticleGenerator particleGenerator;
 
     private void Awake()
     {
         playerId = GetComponent<InputReceiver>().playerId;
         pingSpawner = GetComponent<PingSpawner>();
+        particleGenerator = GetComponent<HitParticleGenerator>();
         screenShake = Camera.main.GetComponent<ScreenShake>();
     }
 
@@ -33,6 +35,7 @@ public class Hurtbox : MonoBehaviour
 
             // Register damage
             hp.currentValue -= pd.damage;
+            particleGenerator.SpawnParticles();
             if (hp.currentValue > 0)
             {
                 pingSpawner.Reveal(PingSpawner.Hurt);
