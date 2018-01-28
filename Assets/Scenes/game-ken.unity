@@ -472,6 +472,7 @@ GameObject:
   - component: {fileID: 308921207}
   - component: {fileID: 308921206}
   - component: {fileID: 308921205}
+  - component: {fileID: 308921209}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -542,6 +543,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308921209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308921204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12b0dd1cdeb8bf4e8a66b8cf794fdd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenScripts: []
+  shakeVector: {x: 0, y: 1, z: 0}
+  shakeTime: 1
 --- !u!1 &535769952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1504,21 @@ Prefab:
       propertyPath: canvasDisplay
       value: 
       objectReference: {fileID: 845826202}
+    - target: {fileID: 212979170159111892, guid: 1fb480302c2d5f94383c571a0f8f83f6,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.90983766
+      objectReference: {fileID: 0}
+    - target: {fileID: 212979170159111892, guid: 1fb480302c2d5f94383c571a0f8f83f6,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212979170159111892, guid: 1fb480302c2d5f94383c571a0f8f83f6,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.066176474
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fb480302c2d5f94383c571a0f8f83f6, type: 2}
   m_IsPrefabParent: 0

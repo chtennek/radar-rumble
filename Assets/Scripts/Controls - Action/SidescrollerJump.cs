@@ -24,6 +24,7 @@ public class SidescrollerJump : MonoBehaviour
     private Rigidbody2D rb;
     private SidescrollerControlManager manager;
     private PingSpawner pingSpawner;
+    private ScreenShake screenShake;
 
     private void Awake()
     {
@@ -31,15 +32,18 @@ public class SidescrollerJump : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         manager = GetComponent<SidescrollerControlManager>();
         pingSpawner = GetComponent<PingSpawner>();
+        screenShake = Camera.main.GetComponent<ScreenShake>();
         doubleJumpsLeft = maxDoubleJumps;
     }
 
     private void FixedUpdate()
     {
+        // Land on ground
         if (manager.IsGrounded() && rb.gravityScale == fallGravityScale)
         {
             GameManager.GetInstance().soundManager.PlaySound("land_on_ground_SFX", 0.7f, false);
             pingSpawner.Reveal(PingSpawner.Land);
+            screenShake.Shake(ScreenShake.LandShake);
         }
 
         // Refresh double jumps

@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
+    public const float LandShake = 0.2f;
+    public const float HitShake = 0.5f;
+    public const float DeathShake = 3f;
     public MonoBehaviour[] screenScripts;
     public Vector3 shakeVector = Vector3.up;
-    public float shakeTime = 1f;
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // For debugging/tweaking
-        {
-            Shake();
-        }
     }
 
-    public void Shake()
+    public void Shake(float shakeTime)
     {
         iTween.ShakePosition(gameObject, shakeVector, shakeTime);
     }

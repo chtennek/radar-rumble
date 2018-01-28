@@ -11,6 +11,7 @@ public class PlayerDeath : MonoBehaviour
     private InputReceiver input;
     private PingSpawner pinger;
     private SpriteRenderer playerSprite;
+    private ScreenShake screenShake;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class PlayerDeath : MonoBehaviour
         input = GetComponent<InputReceiver>();
         pinger = GetComponent<PingSpawner>();
         playerSprite = GetComponent<SpriteRenderer>();
+        screenShake = Camera.main.GetComponent<ScreenShake>();
     }
 
     private void FixedUpdate()
@@ -54,5 +56,6 @@ public class PlayerDeath : MonoBehaviour
         playerSprite.sprite = pinger.sprites[PingSpawner.Hurt];
         GetComponent<Rigidbody2D>().velocity = deathVelocity;
         GameManager.GetInstance().soundManager.PlaySound("defeat", 1f, false);
+        screenShake.Shake(ScreenShake.DeathShake);
     }
 }
