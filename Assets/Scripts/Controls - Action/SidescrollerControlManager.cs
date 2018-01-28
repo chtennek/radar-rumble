@@ -4,8 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
-public class SidescrollerControlManager : MonoBehaviour
-{
+public class SidescrollerControlManager : MonoBehaviour {
     public float defaultGravityScale = 2f;
 
     public float playerHeightAdjust = 0.01f;
@@ -20,39 +19,35 @@ public class SidescrollerControlManager : MonoBehaviour
     private Animator anim;
     private SpriteRenderer sprite;
     private PlayerProperties properties;
+    private PeriodicPing periodicPing;
+    private Collider2D col;
 
-    private void Awake()
-    {
-        Collider2D col = GetComponent<Collider2D>();
-        playerWidth = col.bounds.size.x + playerWidthAdjust;
-        playerHeight = col.bounds.size.y + playerHeightAdjust;
+    private void Awake() {
+        col = GetComponent<Collider2D>();
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         properties = GetComponent<PlayerProperties>();
+        periodicPing = GetComponent<PeriodicPing>();
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
+        playerWidth = col.bounds.size.x + playerWidthAdjust;
+        playerHeight = col.bounds.size.y + playerHeightAdjust;
         UpdateAnimation();
     }
 
-    private void UpdateAnimation()
-    {
-        if (sprite != null)
-        {
-            if (rb.velocity.x > 0)
-            {
+    private void UpdateAnimation() {
+        if (sprite != null) {
+            if (rb.velocity.x > 0) {
                 transform.rotation = Quaternion.identity;
             }
-            if (rb.velocity.x < 0)
-            {
+            if (rb.velocity.x < 0) {
                 transform.rotation = Quaternion.AngleAxis(180, Vector3.up);
             }
         }
-        if (anim != null)
-        {
+        if (anim != null) {
             anim.SetFloat("xVelocity", rb.velocity.x);
             anim.SetFloat("yVelocity", rb.velocity.y);
             anim.SetFloat("gravityScale", rb.gravityScale);
@@ -66,6 +61,9 @@ public class SidescrollerControlManager : MonoBehaviour
             else if (rb.velocity.x < 0) {
                 properties.isFacingRight = false;
             }
+            if (periodicPing != null) {
+                periodicPing.enabled = rb.velocity.y > 0;
+            }
             properties.isGrounded = IsGrounded();
             properties.isWalking = properties.isGrounded && Mathf.Abs(rb.velocity.x) > 0.05;
         }
@@ -73,17 +71,14 @@ public class SidescrollerControlManager : MonoBehaviour
 
     public bool IsGrounded() { return IsGrounded(Vector2.down, groundMask); }
     public bool IsGrounded(Vector2 direction) { return IsGrounded(direction, groundMask); }
-    public bool IsGrounded(Vector2 direction, LayerMask colliderMask)
-    {
+    public bool IsGrounded(Vector2 direction, LayerMask colliderMask) {
         Vector2 boxCenter = (Vector2)transform.position;
         Vector2 boxSize;
-        if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x))
-        {
+        if (Mathf.Abs(direction.y) > Mathf.Abs(direction.x)) {
             boxCenter += 0.5f * playerHeight * transform.lossyScale.y * direction;
             boxSize = new Vector2(playerWidth * transform.lossyScale.x - collisionCheckWidth, collisionCheckWidth);
         }
-        else
-        {
+        else {
             boxCenter += 0.5f * playerWidth * transform.lossyScale.x * direction;
             boxSize = new Vector2(collisionCheckWidth, playerHeight * transform.lossyScale.y - collisionCheckWidth);
         }

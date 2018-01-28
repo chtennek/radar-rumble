@@ -316,6 +316,7 @@
     <Compile Include="Assets\Scripts\Managers\SoundController.cs" />
     <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Sonar\LetterPing.cs" />
+    <Compile Include="Assets\Scripts\Sonar\PeriodicPing.cs" />
     <Compile Include="Assets\Scripts\Sonar\PingSpawner.cs" />
     <Compile Include="Assets\Scripts\Sonar\Radar.cs" />
     <Compile Include="Assets\Scripts\Sonar\Sonar.cs" />

@@ -12,9 +12,9 @@ public class Hurtbox : MonoBehaviour
 
     private void Awake()
     {
-        screenShake = Camera.main.GetComponent<ScreenShake>();
         playerId = GetComponent<InputReceiver>().playerId;
         pingSpawner = GetComponent<PingSpawner>();
+        screenShake = Camera.main.GetComponent<ScreenShake>();
     }
 
     public void OnTriggerEnter2D(Collider2D c)
@@ -22,7 +22,6 @@ public class Hurtbox : MonoBehaviour
         ProjectileDriver pd = c.GetComponent<ProjectileDriver>();
         if (pd != null && hp != null && pd.playerId != playerId)
         {
-
             // Play some sounds
             if (pd.damage < 50) {
                 GameManager.GetInstance().soundManager.PlaySound("hit_rocket", 1f, false);
@@ -36,8 +35,8 @@ public class Hurtbox : MonoBehaviour
             hp.currentValue -= pd.damage;
             if (hp.currentValue > 0)
             {
-                screenShake.Shake(ScreenShake.HitShake);
                 pingSpawner.Reveal(PingSpawner.Hurt);
+                screenShake.Shake(ScreenShake.HitShake);
             }
             Destroy(pd.gameObject);
         }
