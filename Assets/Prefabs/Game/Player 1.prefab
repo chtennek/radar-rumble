@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91f2656a7a9442f4eb99d7c2e16becd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 1
-  minWalkableSpeed: 1
+  walkSpeed: 0.9
+  minWalkableSpeed: 0.9
   inputDeadZone: 0.2
 --- !u!114 &114186174238239374
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpDelay: 0.5
-  jumpSpeed: 5
+  jumpSpeed: 8.7
   jumpReleaseGravityScale: 1
   fallGravityScale: 4
   maxDoubleJumps: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputName: Fire
   spriteIndex: 5
-  fireCooldown: 1
+  fireCooldown: 2
   rapidFire: 1
   projectileLimit: -1
   projectileSpawner: {fileID: 114075910413733968}
@@ -328,8 +328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 114082670788113744}
-  deathVelocity: {x: 0, y: 2.5}
-  deathAnimationTime: 4
+  deathVelocity: {x: 1, y: 1.5}
+  deathAnimationTime: 6
 --- !u!212 &212979170159111892
 SpriteRenderer:
   m_ObjectHideFlags: 1

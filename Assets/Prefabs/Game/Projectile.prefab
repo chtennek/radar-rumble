@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50518291826106750}
   - component: {fileID: 61696932055793944}
   - component: {fileID: 114318767617620062}
+  - component: {fileID: 114029127378833954}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Projectile
@@ -88,6 +89,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34, y: 0.11}
   m_EdgeRadius: 0
+--- !u!114 &114029127378833954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1915862259798276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c160c16ce9268894e8deb92fae27a1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 1469385758204810, guid: c631bcb257b18fb49b3a327d85632f11,
+    type: 2}
+  _timeUntilNewSpawn: 0.2
 --- !u!114 &114318767617620062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446191285f571604e9fff90144240447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 5
+  lifetime: 3
   playerId: 0
-  damage: 20
+  damage: 35
   sourceObject: {fileID: 0}
 --- !u!212 &212366327685868224
 SpriteRenderer:
