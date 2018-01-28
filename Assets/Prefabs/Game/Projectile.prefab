@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 5
   playerId: 0
-  damage: 10
+  damage: 20
   sourceObject: {fileID: 0}
 --- !u!212 &212366327685868224
 SpriteRenderer:

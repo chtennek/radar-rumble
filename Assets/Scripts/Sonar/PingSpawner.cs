@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class PingSpawner : MonoBehaviour {
+public class PingSpawner : MonoBehaviour
+{
     public const int Idle = 1;
     public const int Walk = 0;
     public const int Jump = 4;
@@ -18,14 +19,16 @@ public class PingSpawner : MonoBehaviour {
     private PlayerProperties properties;
     private SpriteRenderer playerSprite;
 
-    private void Start() {
+    private void Start()
+    {
         playerSprite = GetComponent<SpriteRenderer>();
         properties = GetComponent<PlayerProperties>();
     }
 
     public void OnTriggerEnter2D(Collider2D c)
     {
-        if (c.tag == "Radar") {
+        if (this.enabled == true && c.tag == "Radar")
+        {
             SpriteRenderer spriteRenderer = CreatePingRenderer();
             if (properties.isWalking)
             {
@@ -42,15 +45,18 @@ public class PingSpawner : MonoBehaviour {
         }
     }
 
-    public void Reveal(int frame) {
+    public void Reveal(int frame)
+    {
         SpriteRenderer spriteRenderer = CreatePingRenderer();
         spriteRenderer.sprite = sprites[frame];
     }
 
-    public SpriteRenderer CreatePingRenderer() {
+    public SpriteRenderer CreatePingRenderer()
+    {
         Transform ping = Instantiate(pingPrefab, transform.position, Quaternion.identity);
         SpriteRenderer spriteRenderer = ping.GetComponent<SpriteRenderer>();
-        if (!properties.isFacingRight) {
+        if (!properties.isFacingRight)
+        {
             ping.localScale = new Vector3(-1f, 1f, 1f);
         }
         spriteRenderer.color = playerSprite.color;

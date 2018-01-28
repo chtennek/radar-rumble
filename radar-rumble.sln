@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "radar-rumble.Plugins", "radar-rumble.Plugins.csproj", "{3C897596-1D3F-C042-806D-681B4A260F7B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "radar-rumble", "radar-rumble.csproj", "{8A50D7E8-3421-A20C-5D89-7E0779F67244}"

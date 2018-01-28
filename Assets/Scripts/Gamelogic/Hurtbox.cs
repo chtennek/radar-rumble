@@ -9,7 +9,8 @@ public class Hurtbox : MonoBehaviour
     private int playerId;
     private PingSpawner pingSpawner;
 
-    private void Awake() {
+    private void Awake()
+    {
         playerId = GetComponent<InputReceiver>().playerId;
         pingSpawner = GetComponent<PingSpawner>();
     }
@@ -17,9 +18,13 @@ public class Hurtbox : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D c)
     {
         ProjectileDriver pd = c.GetComponent<ProjectileDriver>();
-        if (pd != null && hp != null && pd.playerId != playerId) {
+        if (pd != null && hp != null && pd.playerId != playerId)
+        {
             hp.currentValue -= pd.damage;
-            pingSpawner.Reveal(PingSpawner.Hurt);
+            if (hp.currentValue > 0)
+            {
+                pingSpawner.Reveal(PingSpawner.Hurt);
+            }
             Destroy(pd.gameObject);
         }
     }

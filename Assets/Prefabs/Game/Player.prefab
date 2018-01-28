@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 114682118780049844}
   - component: {fileID: 114025459342413880}
   - component: {fileID: 114856439364780260}
+  - component: {fileID: 114760309009024762}
   m_Layer: 9
   m_Name: Player 1
   m_TagString: Untagged
@@ -211,6 +212,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 0
   defaultDeadZone: 0
+--- !u!114 &114760309009024762
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1263530940312588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0568c70d6ec54fe2be349c975285661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 114642837310655236}
+  deathVelocity: {x: 0, y: 2.5}
+  deathAnimationTime: 4
 --- !u!114 &114785388908389998
 MonoBehaviour:
   m_ObjectHideFlags: 1
