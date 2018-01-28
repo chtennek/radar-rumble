@@ -38,6 +38,7 @@ public class SidescrollerJump : MonoBehaviour
     {
         if (manager.IsGrounded() && rb.gravityScale == fallGravityScale)
         {
+            GameManager.GetInstance().soundManager.PlaySound("land_on_ground_SFX", 0.7f, false);
             pingSpawner.Reveal(PingSpawner.Land);
         }
 

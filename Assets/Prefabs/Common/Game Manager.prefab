@@ -8,6 +8,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 404962}
+  - component: {fileID: 114239916895040640}
+  - component: {fileID: 114643615367236284}
+  - component: {fileID: 114940025963608766}
+  - component: {fileID: 114858611806636598}
+  - component: {fileID: 114331150917750842}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: GameController
@@ -39,3 +44,63 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 119984}
   m_IsPrefabParent: 1
+--- !u!114 &114239916895040640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9997cbaa4fb9a4c9cf6f7c1c30acc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataManager: {fileID: 0}
+  screenManager: {fileID: 0}
+  soundManager: {fileID: 0}
+  soundController: {fileID: 0}
+--- !u!114 &114331150917750842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02cf32aa082b6504f9ad6b7fee46355e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114643615367236284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2bd845aac7c3d48802ae385c2ce013, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114858611806636598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58b8e7041d36a041b254f9df38dafe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114940025963608766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faef8d1b266f069478f4ebbdfbf0e665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radarRotation: {x: 0, y: 0, z: 0}

@@ -55,5 +55,6 @@ public class PlayerDeath : MonoBehaviour
         }
         playerSprite.sprite = pinger.sprites[PingSpawner.Hurt];
         GetComponent<Rigidbody2D>().velocity = deathVelocity;
+        GameManager.GetInstance().soundManager.PlaySound("defeat", 1f, false);
     }
 }

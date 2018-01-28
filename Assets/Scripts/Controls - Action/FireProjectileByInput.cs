@@ -34,10 +34,17 @@ public class FireProjectileByInput : MonoBehaviour
     {
         if (input.GetButtonDown(inputName) || (rapidFire && input.GetButton(inputName)))
         {
+            Debug.Log(inputName);
             if (Time.time - lastFiredTimestamp >= fireCooldown && (projectileLimit < 0 || projectileSpawner.projectilesFired.Count < projectileLimit))
             {
                 lastFiredTimestamp = Time.time;
                 pingSpawner.Reveal(spriteIndex);
+                if (inputName == "Fire") {
+                    GameManager.GetInstance().soundManager.PlaySound("use_rocket_SFX", 1f, false);
+                }
+                else if (inputName == "Melee") {
+                    GameManager.GetInstance().soundManager.PlaySound("use_melee_SFX", 1f, false);
+                }
                 List<Transform> projectiles = projectileSpawner.Fire();
                 foreach (Transform p in projectiles)
                 {

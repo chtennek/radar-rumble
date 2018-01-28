@@ -28,6 +28,7 @@ public class ProjectileDriver : MonoBehaviour
 
     private void TearDown()
     {
+        GameManager.GetInstance().soundManager.PlaySound("despawn_rocket", 1f, false);
         sourceObject.SendMessage("OnProjectileDeletion", transform);
         Destroy(gameObject);
     }

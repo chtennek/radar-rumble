@@ -20,6 +20,16 @@ public class Hurtbox : MonoBehaviour
         ProjectileDriver pd = c.GetComponent<ProjectileDriver>();
         if (pd != null && hp != null && pd.playerId != playerId)
         {
+            // Play some sounds
+            if (pd.damage < 50) {
+                GameManager.GetInstance().soundManager.PlaySound("hit_rocket", 1f, false);
+            }
+            else {
+                GameManager.GetInstance().soundManager.PlaySound("hit_melee", 1f, false);
+            }
+            GameManager.GetInstance().soundController.PlayHitChatter();
+
+            // Register damage
             hp.currentValue -= pd.damage;
             if (hp.currentValue > 0)
             {

@@ -312,6 +312,8 @@
     <Compile Include="Assets\Scripts\Input\InputReceiver.cs" />
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\ScreenManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\SoundController.cs" />
     <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Sonar\LetterPing.cs" />
     <Compile Include="Assets\Scripts\Sonar\PingSpawner.cs" />
