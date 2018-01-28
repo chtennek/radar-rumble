@@ -6,7 +6,7 @@ public class Radar : MonoBehaviour {
     public float rotationSpeed;
 
     private void Start() {
-        GameManager.GetInstance().soundManager.PlayUniqueSound("radar_loop_SFX", 0.15f, true);
+        GameManager.GetInstance().soundManager.PlayUniqueSound("radar_loop_SFX", 0.6f, true);
         transform.eulerAngles = GameManager.GetInstance().dataManager.radarRotation;
     }
 

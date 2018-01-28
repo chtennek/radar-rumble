@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
     public StatusBar hp;
     public Vector2 deathVelocity = 2.5f * Vector3.up;
-    public float deathAnimationTime = 4f;
+    public float deathAnimationTime = 7f;
     private float timeOfDeath = Mathf.Infinity;
 
     private SidescrollerControlManager manager;
@@ -39,7 +37,7 @@ public class PlayerDeath : MonoBehaviour
 
         if (Time.time - timeOfDeath >= deathAnimationTime)
         {
-            Debug.Log("Go to menu-main scene");
+            GameManager.GetInstance().screenManager.GoToNextScene();
         }
     }
 

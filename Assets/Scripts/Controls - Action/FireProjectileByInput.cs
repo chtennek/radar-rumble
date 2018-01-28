@@ -34,7 +34,6 @@ public class FireProjectileByInput : MonoBehaviour
     {
         if (input.GetButtonDown(inputName) || (rapidFire && input.GetButton(inputName)))
         {
-            Debug.Log(inputName);
             if (Time.time - lastFiredTimestamp >= fireCooldown && (projectileLimit < 0 || projectileSpawner.projectilesFired.Count < projectileLimit))
             {
                 lastFiredTimestamp = Time.time;

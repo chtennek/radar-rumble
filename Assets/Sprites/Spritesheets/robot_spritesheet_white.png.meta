@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: 2273192ef83f642fb9e1768c5d302fb3
-timeCreated: 1517082614
+guid: cfe874e265ce4f64192761bcbb6f480a
+timeCreated: 1517156711
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: robot1_sprites_sheet1_0
-    21300002: robot1_sprites_sheet1_1
-    21300004: robot1_sprites_sheet1_2
-    21300006: robot1_sprites_sheet1_3
-    21300008: robot1_sprites_sheet1_4
-    21300010: robot1_sprites_sheet1_5
-    21300012: robot1_sprites_sheet1_6
-    21300014: robot1_sprites_sheet1_7
+    21300000: robot_spritesheet_white_0
+    21300002: robot_spritesheet_white_1
+    21300004: robot_spritesheet_white_2
+    21300006: robot_spritesheet_white_3
+    21300008: robot_spritesheet_white_4
+    21300010: robot_spritesheet_white_5
+    21300012: robot_spritesheet_white_6
+    21300014: robot_spritesheet_white_7
+    21300016: robot_spritesheet_white_8
+    21300018: robot_spritesheet_white_9
+    21300020: robot_spritesheet_white_10
+    21300022: robot_spritesheet_white_11
+    21300024: robot_spritesheet_white_12
+    21300026: robot_spritesheet_white_13
+    21300028: robot_spritesheet_white_14
+    21300030: robot_spritesheet_white_15
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -84,16 +92,6 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   - buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -108,11 +106,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_0
+      name: robot_spritesheet_white_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 1178
+        x: 11
+        y: 395
         width: 130
         height: 130
       alignment: 0
@@ -122,11 +120,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_1
+      name: robot_spritesheet_white_1
       rect:
         serializedVersion: 2
         x: 140
-        y: 1178
+        y: 395
         width: 130
         height: 130
       alignment: 0
@@ -136,11 +134,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_2
+      name: robot_spritesheet_white_2
       rect:
         serializedVersion: 2
         x: 270
-        y: 1178
+        y: 395
         width: 130
         height: 130
       alignment: 0
@@ -150,11 +148,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_3
+      name: robot_spritesheet_white_3
       rect:
         serializedVersion: 2
         x: 400
-        y: 1178
+        y: 395
         width: 130
         height: 130
       alignment: 0
@@ -164,11 +162,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_4
+      name: robot_spritesheet_white_4
       rect:
         serializedVersion: 2
         x: 10
-        y: 1048
+        y: 265
         width: 130
         height: 130
       alignment: 0
@@ -178,11 +176,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_5
+      name: robot_spritesheet_white_5
       rect:
         serializedVersion: 2
         x: 140
-        y: 1048
+        y: 265
         width: 130
         height: 130
       alignment: 0
@@ -192,11 +190,11 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_6
+      name: robot_spritesheet_white_6
       rect:
         serializedVersion: 2
         x: 270
-        y: 1048
+        y: 265
         width: 130
         height: 130
       alignment: 0
@@ -206,11 +204,123 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: robot1_sprites_sheet1_7
+      name: robot_spritesheet_white_7
       rect:
         serializedVersion: 2
         x: 400
-        y: 1048
+        y: 265
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 135
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 135
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_10
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 135
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_11
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 136
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 5
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 5
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 5
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: robot_spritesheet_white_15
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5
         width: 130
         height: 130
       alignment: 0
