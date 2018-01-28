@@ -1,29 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class DefaultInputReceiver : InputReceiver
 {
+    public AxesList axesList;
     private static List<string> axes;
     private Hashtable buttonDown = new Hashtable();
     private Hashtable buttonUp = new Hashtable();
 
     private void Awake()
     {
-        if (axes == null)
+        if (axes == null && axesList != null && axesList.axes.Length > 0)
         {
             axes = new List<string>();
-            Object inputManager = AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/InputManager.asset")[0];
-            SerializedObject obj = new SerializedObject(inputManager);
-            SerializedProperty axisArray = obj.FindProperty("m_Axes");
-            for (int i = 0; i < axisArray.arraySize; i++)
+            foreach (string axisName in axesList.axes)
             {
-                SerializedProperty axis = axisArray.GetArrayElementAtIndex(i);
-                if (axis.FindPropertyRelative("type").intValue == 0) // KeyOrMouseButton only
-                {
-                    axes.Add(axis.FindPropertyRelative("m_Name").stringValue);
-                }
+                axes.Add(axisName);
             }
         }
     }

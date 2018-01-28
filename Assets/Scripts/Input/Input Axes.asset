@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561617eda585b0544876f3c14e1c0317, type: 3}
+  m_Name: Input Axes
+  m_EditorClassIdentifier: 
+  axes:
+  - 1. Move Horizontal
+  - 2. Move Horizontal
+  - 1. Move Vertical
+  - 2. Move Vertical
+  - 1. Aim Horizontal
+  - 2. Aim Horizontal
+  - 1. Aim Vertical
+  - 2. Aim Vertical
+  - 1. Fire
+  - 2. Fire
+  - 1. Melee
+  - 2. Melee
+  - 1. Jump
+  - 2. Jump
+  - Submit
+  - Cancel

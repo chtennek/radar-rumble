@@ -231,6 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerId: 0
   defaultDeadZone: 0
+  axesList: {fileID: 11400000, guid: b47d62386ac4a0f4e903ff69fa7eaecf, type: 2}
 --- !u!114 &114760309009024762
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -304,6 +304,7 @@
     <Compile Include="Assets\Scripts\Entities\ProjectileSpawner.cs" />
     <Compile Include="Assets\Scripts\Gamelogic\Hurtbox.cs" />
     <Compile Include="Assets\Scripts\Gamelogic\PlayerDeath.cs" />
+    <Compile Include="Assets\Scripts\Input\AxesList.cs" />
     <Compile Include="Assets\Scripts\Input\DefaultInputReceiver.cs" />
     <Compile Include="Assets\Scripts\Input\InputReceiver.cs" />
     <Compile Include="Assets\Scripts\Sonar\PingSpawner.cs" />
