@@ -4,10 +4,14 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class PingSpawner : MonoBehaviour {
-    public const int MeleeAttack = 0;
-    public const int ShootAttack = 1;
-    public const int Hurt = 2;
-    public const int Die = 3;
+    public const int Idle = 1;
+    public const int Walk = 0;
+    public const int Jump = 4;
+    public const int Land = 2;
+    public const int MeleeAttack = 3;
+    public const int ShootAttack = 5;
+    public const int Hurt = 6;
+    public const int Die = 7;
 
     public Transform pingPrefab;
     public Sprite[] sprites;
@@ -21,38 +25,26 @@ public class PingSpawner : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D c)
     {
-        SpriteRenderer spriteRenderer = CreatePingRenderer();
-        if (properties.isShooting) {
-            properties.isShooting = false;
-            spriteRenderer.sprite = sprites[5];
-        }
-        else if (properties.isWalking) {
-            spriteRenderer.sprite = (Random.Range(0f, 1f) < 0.5f) ? sprites[0] : sprites[1];
-        }
-        else if (properties.isGrounded) {
-            spriteRenderer.sprite = sprites[0];
-        }
-        else if (!properties.isGrounded) {
-            spriteRenderer.sprite = sprites[4];
+        if (c.tag == "Radar") {
+            SpriteRenderer spriteRenderer = CreatePingRenderer();
+            if (properties.isWalking)
+            {
+                spriteRenderer.sprite = (Random.Range(0f, 1f) < 0.5f) ? sprites[0] : sprites[1];
+            }
+            else if (properties.isGrounded)
+            {
+                spriteRenderer.sprite = sprites[0];
+            }
+            else if (!properties.isGrounded)
+            {
+                spriteRenderer.sprite = sprites[4];
+            }
         }
     }
 
     public void Reveal(int frame) {
         SpriteRenderer spriteRenderer = CreatePingRenderer();
-        switch (frame) {
-            case PingSpawner.MeleeAttack:
-                spriteRenderer.sprite = sprites[3];
-                break;
-            case PingSpawner.ShootAttack:
-                spriteRenderer.sprite = sprites[5];
-                break;
-            case PingSpawner.Hurt:
-                spriteRenderer.sprite = sprites[6];
-                break;
-            case PingSpawner.Die:
-                spriteRenderer.sprite = sprites[7];
-                break;
-        }
+        spriteRenderer.sprite = sprites[frame];
     }
 
     public SpriteRenderer CreatePingRenderer() {

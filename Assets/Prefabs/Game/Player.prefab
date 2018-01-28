@@ -257,8 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 212c29b40f2c8a444a8f9ddf0213749f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpDelay: 0.5
   jumpSpeed: 5
-  jumpReleaseGravityScale: 12
+  jumpReleaseGravityScale: 1
   fallGravityScale: 4
   maxDoubleJumps: 0
   allowWallJump: 0

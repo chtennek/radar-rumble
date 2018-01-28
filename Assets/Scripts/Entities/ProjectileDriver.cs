@@ -31,4 +31,11 @@ public class ProjectileDriver : MonoBehaviour
         sourceObject.SendMessage("OnProjectileDeletion", transform);
         Destroy(gameObject);
     }
+
+    private void OnTriggerEnter2D(Collider2D c)
+    {
+        if (c.tag == "Projectile") {
+            TearDown();
+        }
+    }
 }
