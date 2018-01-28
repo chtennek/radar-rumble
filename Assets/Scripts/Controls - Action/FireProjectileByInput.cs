@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(ProjectileSpawner))]
 public class FireProjectileByInput : MonoBehaviour
 {
+    public string inputName = "Fire";
+    public int spriteIndex;
     public float fireCooldown;
     public bool rapidFire; // Continue firing when input is held
     public int projectileLimit = -1; // Set to negative value for no limit
@@ -13,34 +15,40 @@ public class FireProjectileByInput : MonoBehaviour
     private float lastFiredTimestamp = -Mathf.Infinity;
 
     private InputReceiver input;
-    private ProjectileSpawner projectileSpawner;
+    public ProjectileSpawner projectileSpawner;
     private PingSpawner pingSpawner;
     private SpriteRenderer playerSprite;
 
     private void Awake()
     {
         input = GetComponent<InputReceiver>();
-        projectileSpawner = GetComponent<ProjectileSpawner>();
+        if (projectileSpawner == null)
+        {
+            projectileSpawner = GetComponent<ProjectileSpawner>();
+        }
         pingSpawner = GetComponent<PingSpawner>();
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
-        if (input.GetButtonDown("Fire") || (rapidFire && input.GetButton("Fire")))
+        if (input.GetButtonDown(inputName) || (rapidFire && input.GetButton(inputName)))
         {
             if (Time.time - lastFiredTimestamp >= fireCooldown && (projectileLimit < 0 || projectileSpawner.projectilesFired.Count < projectileLimit))
             {
                 lastFiredTimestamp = Time.time;
-                pingSpawner.Reveal(PingSpawner.ShootAttack);
+                pingSpawner.Reveal(spriteIndex);
                 List<Transform> projectiles = projectileSpawner.Fire();
-                foreach (Transform p in projectiles) {
+                foreach (Transform p in projectiles)
+                {
                     SpriteRenderer sprite = p.GetComponent<SpriteRenderer>();
-                    if (sprite != null) {
+                    if (sprite != null)
+                    {
                         sprite.color = playerSprite.color;
                     }
-                    if (transform.eulerAngles != Vector3.zero) {
-                        p.eulerAngles = new Vector3(0, 180, 0);
+                    if (transform.eulerAngles != Vector3.zero)
+                    {
+                        p.RotateAround(p.position, Vector3.up, 180);
                     }
                 }
             }

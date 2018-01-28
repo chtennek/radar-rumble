@@ -29,9 +29,11 @@ GameObject:
   - component: {fileID: 58841796679239150}
   - component: {fileID: 114265082531390550}
   - component: {fileID: 114682118780049844}
+  - component: {fileID: 114760309009024762}
   - component: {fileID: 114025459342413880}
   - component: {fileID: 114856439364780260}
-  - component: {fileID: 114760309009024762}
+  - component: {fileID: 114876586201531050}
+  - component: {fileID: 114509328712619680}
   m_Layer: 9
   m_Name: Player 1
   m_TagString: Untagged
@@ -164,6 +166,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 114642837310655236}
+--- !u!114 &114509328712619680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1263530940312588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feca23b6005af70438d0e828745a4293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputName: Melee
+  spriteIndex: 3
+  fireCooldown: 2
+  rapidFire: 0
+  projectileLimit: -1
+  projectileSpawner: {fileID: 114876586201531050}
 --- !u!114 &114642837310655236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -258,9 +277,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feca23b6005af70438d0e828745a4293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputName: Fire
+  spriteIndex: 5
   fireCooldown: 1
   rapidFire: 1
   projectileLimit: -1
+  projectileSpawner: {fileID: 114025459342413880}
+--- !u!114 &114876586201531050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1263530940312588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2447199f1d86ee4397252b322aadc36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 4577233602812712, guid: d3779912719a0fa478e9a8563f4d6195,
+    type: 2}
+  spawnOffset: {x: 0.5, y: 0}
+  angleWhenUpright: 0
+  fixRotation: 0
+  projectileVelocities:
+  - {x: 0, y: 0}
+  spread: {x: 0, y: 0}
+  pelletCount: 1
+  projectilesFired: []
 --- !u!114 &114970395828092224
 MonoBehaviour:
   m_ObjectHideFlags: 1
