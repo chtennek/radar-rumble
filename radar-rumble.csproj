@@ -327,12 +327,12 @@
     <Compile Include="Assets\Scripts\Common\Mathv.cs" />
     <Compile Include="Assets\Scripts\Common\StatusBar.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\FireProjectileByInput.cs" />
-    <Compile Include="Assets\Scripts\Controls - Action\MoveTurret.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\SidescrollerControlManager.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\SidescrollerJump.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\SidescrollerWalk.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\TopDownFreeTurn.cs" />
     <Compile Include="Assets\Scripts\Controls - Action\TopdownFreeWalk.cs" />
+    <Compile Include="Assets\Scripts\Entities\PlayerProperties.cs" />
     <Compile Include="Assets\Scripts\Entities\ProjectileDriver.cs" />
     <Compile Include="Assets\Scripts\Entities\ProjectileSpawner.cs" />
     <Compile Include="Assets\Scripts\Gamelogic\Hurtbox.cs" />

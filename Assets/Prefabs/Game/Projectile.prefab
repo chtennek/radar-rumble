@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446191285f571604e9fff90144240447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: Infinity
+  lifetime: 5
   playerId: 0
   damage: 10
   sourceObject: {fileID: 0}
@@ -137,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dce11465d2f4c47a0a4140948c155375, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bbd657b47b7645758ca314d759a908d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

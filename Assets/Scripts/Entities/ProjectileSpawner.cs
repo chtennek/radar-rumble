@@ -23,17 +23,20 @@ public class ProjectileSpawner : MonoBehaviour
         input = GetComponent<InputReceiver>();
     }
 
-    public void Fire() { Fire(Vector2.right); }
-    public void Fire(Vector2 modifier)
+    public List<Transform> Fire() { return Fire(Vector2.right); }
+    public List<Transform> Fire(Vector2 modifier)
     {
+        List<Transform> projectiles = new List<Transform>();
         for (int i = 0; i < pelletCount; i++)
         {
             foreach (Vector2 velocity in projectileVelocities)
             {
                 Vector2 modifiedVelocity = Quaternion.AngleAxis(modifier.y, Vector3.forward) * (modifier.x * velocity);
-                SpawnProjectile(modifiedVelocity + new Vector2(Random.Range(-spread.x, spread.x), Random.Range(-spread.y, spread.y)));
+                Transform projectile = SpawnProjectile(modifiedVelocity + new Vector2(Random.Range(-spread.x, spread.x), Random.Range(-spread.y, spread.y)));
+                projectiles.Add(projectile);
             }
         }
+        return projectiles;
     }
 
     private Transform SpawnProjectile(Vector2 velocity)

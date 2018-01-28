@@ -13,22 +13,35 @@ public class FireProjectileByInput : MonoBehaviour
     private float lastFiredTimestamp = -Mathf.Infinity;
 
     private InputReceiver input;
-    private ProjectileSpawner spawner;
+    private ProjectileSpawner projectileSpawner;
+    private PingSpawner pingSpawner;
+    private PlayerProperties properties;
+    private SpriteRenderer playerSprite;
 
     private void Awake()
     {
         input = GetComponent<InputReceiver>();
-        spawner = GetComponent<ProjectileSpawner>();
+        projectileSpawner = GetComponent<ProjectileSpawner>();
+        pingSpawner = GetComponent<PingSpawner>();
+        properties = GetComponent<PlayerProperties>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
         if (input.GetButtonDown("Fire") || (rapidFire && input.GetButton("Fire")))
         {
-            if (Time.time - lastFiredTimestamp >= fireCooldown && (projectileLimit < 0 || spawner.projectilesFired.Count < projectileLimit))
+            if (Time.time - lastFiredTimestamp >= fireCooldown && (projectileLimit < 0 || projectileSpawner.projectilesFired.Count < projectileLimit))
             {
                 lastFiredTimestamp = Time.time;
-                spawner.Fire();
+                properties.isShooting = true;
+                List<Transform> projectiles = projectileSpawner.Fire();
+                foreach (Transform p in projectiles) {
+                    SpriteRenderer sprite = p.GetComponent<SpriteRenderer>();
+                    if (sprite != null) {
+                        sprite.color = playerSprite.color;
+                    }
+                }
             }
         }
     }

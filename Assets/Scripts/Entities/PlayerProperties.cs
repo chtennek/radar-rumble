@@ -6,4 +6,5 @@ public class PlayerProperties : MonoBehaviour {
     public bool isFacingRight;
     public bool isGrounded;
     public bool isWalking;
+    public bool isShooting;
 }

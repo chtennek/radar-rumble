@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InputReceiver))]
 public class Hurtbox : MonoBehaviour
 {
-    public int playerId;
     public StatusBar hp;
+    private int playerId;
+
+    private void Awake() {
+        playerId = GetComponent<InputReceiver>().playerId;
+    }
 
     public void OnTriggerEnter2D(Collider2D c)
     {
