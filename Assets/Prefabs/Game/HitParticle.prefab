@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 114718798015948674}
   - component: {fileID: 61992979783615420}
   - component: {fileID: 50354248494253192}
-  - component: {fileID: 114486020637940270}
   m_Layer: 12
   m_Name: HitParticle
   m_TagString: Untagged
@@ -89,18 +88,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.08}
   m_EdgeRadius: 0
---- !u!114 &114486020637940270
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1670842100326398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29fd201bb33223f4b8ad40f19ea59372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particlePrefab: {fileID: 1670842100326398}
 --- !u!114 &114718798015948674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,9 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f613003ce12a364bb7108a82e724e88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeDuration: 1
-  collidableDuration: 0.8
-  fadeOutDuration: 0.4
 --- !u!212 &212809066416623588
 SpriteRenderer:
   m_ObjectHideFlags: 1

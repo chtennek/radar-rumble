@@ -10,12 +10,9 @@ public class ScreenShake : MonoBehaviour
     public MonoBehaviour[] screenScripts;
     public Vector3 shakeVector = Vector3.up;
 
-    private void Update()
-    {
-    }
+    private void Update() {}
 
-    public void Shake(float shakeTime)
-    {
-        iTween.ShakePosition(gameObject, shakeVector, shakeTime);
+    public void Shake(float shakeTime) {
+        iTween.ShakePosition(gameObject, new Vector3(0.5f, 0.5f, 0f), shakeTime);
     }
 }
